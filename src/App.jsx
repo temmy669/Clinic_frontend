@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import heroImage from './assets/dental-hero-image.jpg';
+import {heroImage, whiteningBefore, whiteningAfter } from './assets';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -221,48 +221,143 @@ function App() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4 heading-font">Amazing Smile Transformations</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">See the incredible results our patients have achieved. These real before and after photos showcase the life-changing power of modern dentistry.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
-              <div className="before-after-container">
-                <div className="before-after-slider" 
-                     onMouseMove={(e) => updateSlider(e, e.currentTarget)} 
-                     onMouseEnter={(e) => showLabels(e.currentTarget)} 
-                     onMouseLeave={(e) => hideLabels(e.currentTarget)}>
-                  <svg className="before-image" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="300" fill="#F3F4F6"/>
-                    <circle cx="200" cy="100" r="60" fill="#FED7AA"/>
-                    <path d="M160 120 Q200 140 240 120" stroke="#8B5CF6" strokeWidth="2" fill="none"/>
-                    <rect x="180" y="125" width="8" height="15" rx="2" fill="#D97706"/>
-                    <rect x="190" y="125" width="8" height="15" rx="2" fill="#D97706"/>
-                    <rect x="200" y="125" width="8" height="15" rx="2" fill="#D97706"/>
-                    <rect x="210" y="125" width="8" height="15" rx="2" fill="#D97706"/>
-                    <text x="200" y="200" textAnchor="middle" className="text-lg font-semibold" fill="#6B7280">Stained Teeth</text>
-                  </svg>
-                  <svg className="after-image" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="300" fill="#F0F9FF"/>
-                    <circle cx="200" cy="100" r="60" fill="#FED7AA"/>
-                    <path d="M160 120 Q200 140 240 120" stroke="#8B5CF6" strokeWidth="2" fill="none"/>
-                    <rect x="180" y="125" width="8" height="15" rx="2" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <rect x="190" y="125" width="8" height="15" rx="2" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <rect x="200" y="125" width="8" height="15" rx="2" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <rect x="210" y="125" width="8" height="15" rx="2" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="200" y="200" textAnchor="middle" className="text-lg font-semibold" fill="#3B82F6">Bright White Smile</text>
-                    <circle cx="170" cy="110" r="2" fill="#FCD34D"/>
-                    <circle cx="230" cy="115" r="2" fill="#FCD34D"/>
-                  </svg>
-                  <div className="slider-line"></div>
-                  <div className="slider-handle"></div>
-                  <div className="before-label" style={{opacity: 0}}>BEFORE</div>
-                  <div className="after-label" style={{opacity: 0}}>AFTER</div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 heading-font">Professional Teeth Whitening</h3>
-                <p className="text-gray-600 text-sm">Dramatic whitening results achieved in just one visit using our advanced whitening system.</p>
+          {/* Card 1 */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+            <div className="before-after-container">
+              <div className="before-after-slider"
+                onMouseMove={(e) => updateSlider(e, e.currentTarget)}
+                onMouseEnter={(e) => showLabels(e.currentTarget)}
+                onMouseLeave={(e) => hideLabels(e.currentTarget)}>
+                
+                <img
+                  src={whiteningBefore}
+                  alt="Stained Teeth"
+                  className="before-image w-full h-full object-cover"
+                />
+                <img
+                  src={whiteningAfter}
+                  alt="Bright White Smile"
+                  className="after-image w-full h-full object-cover"
+                />
+
+                <div className="slider-line"></div>
+                <div className="slider-handle"></div>
+                <div className="before-label" style={{ opacity: 0 }}>BEFORE</div>
+                <div className="after-label" style={{ opacity: 0 }}>AFTER</div>
               </div>
             </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 heading-font">Professional Teeth Whitening</h3>
+              <p className="text-gray-600 text-sm">
+                Dramatic whitening results achieved in just one visit using our advanced whitening system.
+              </p>
+            </div>
           </div>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+            <div className="before-after-container">
+              <div className="before-after-slider"
+                onMouseMove={(e) => updateSlider(e, e.currentTarget)}
+                onMouseEnter={(e) => showLabels(e.currentTarget)}
+                onMouseLeave={(e) => hideLabels(e.currentTarget)}>
+                
+                <img
+                  src={whiteningBefore}
+                  alt="Stained Teeth"
+                  className="before-image w-full h-full object-cover"
+                />
+                <img
+                  src={whiteningAfter}
+                  alt="Bright White Smile"
+                  className="after-image w-full h-full object-cover"
+                />
+
+                <div className="slider-line"></div>
+                <div className="slider-handle"></div>
+                <div className="before-label" style={{ opacity: 0 }}>BEFORE</div>
+                <div className="after-label" style={{ opacity: 0 }}>AFTER</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 heading-font">Professional Teeth Whitening</h3>
+              <p className="text-gray-600 text-sm">
+                Dramatic whitening results achieved in just one visit using our advanced whitening system.
+              </p>
+            </div>
+          </div>
+
+            {/* Card 3 */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+            <div className="before-after-container">
+              <div className="before-after-slider"
+                onMouseMove={(e) => updateSlider(e, e.currentTarget)}
+                onMouseEnter={(e) => showLabels(e.currentTarget)}
+                onMouseLeave={(e) => hideLabels(e.currentTarget)}>
+                
+                <img
+                  src={whiteningBefore}
+                  alt="Stained Teeth"
+                  className="before-image w-full h-full object-cover"
+                />
+                <img
+                  src={whiteningAfter}
+                  alt="Bright White Smile"
+                  className="after-image w-full h-full object-cover"
+                />
+
+                <div className="slider-line"></div>
+                <div className="slider-handle"></div>
+                <div className="before-label" style={{ opacity: 0 }}>BEFORE</div>
+                <div className="after-label" style={{ opacity: 0 }}>AFTER</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 heading-font">Professional Teeth Whitening</h3>
+              <p className="text-gray-600 text-sm">
+                Dramatic whitening results achieved in just one visit using our advanced whitening system.
+              </p>
+            </div>
+          </div>
+
+            {/* Card 4 */}
+          {/* <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+            <div className="before-after-container">
+              <div className="before-after-slider"
+                onMouseMove={(e) => updateSlider(e, e.currentTarget)}
+                onMouseEnter={(e) => showLabels(e.currentTarget)}
+                onMouseLeave={(e) => hideLabels(e.currentTarget)}>
+                
+                <img
+                  src={whiteningBefore}
+                  alt="Stained Teeth"
+                  className="before-image w-full h-full object-cover"
+                />
+                <img
+                  src={whiteningAfter}
+                  alt="Bright White Smile"
+                  className="after-image w-full h-full object-cover"
+                />
+
+                <div className="slider-line"></div>
+                <div className="slider-handle"></div>
+                <div className="before-label" style={{ opacity: 0 }}>BEFORE</div>
+                <div className="after-label" style={{ opacity: 0 }}>AFTER</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 heading-font">Professional Teeth Whitening</h3>
+              <p className="text-gray-600 text-sm">
+                Dramatic whitening results achieved in just one visit using our advanced whitening system.
+              </p>
+            </div>
+          </div> */}
+
+        </div>
+
+
 
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 text-center">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
