@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import heroImage from './assets/dental-hero-image.jpg';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -118,7 +119,7 @@ function App() {
                 <span className="text-2xl">🦷</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900 heading-font">Bright Smile</h1>
+                <h1 className="text-2xl font-bold text-gray-900 heading-font">Awesome Smile</h1>
                 <p className="text-xs text-blue-600 font-medium">Dental Care</p>
               </div>
             </div>
@@ -174,23 +175,8 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-white rounded-3xl shadow-2xl p-8 floating">
-                <svg className="w-full h-96" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="200" cy="150" r="80" fill="#FED7AA"/>
-                  <path d="M160 170 Q200 200 240 170" stroke="#1F2937" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                  <circle cx="180" cy="130" r="4" fill="#1F2937"/>
-                  <circle cx="220" cy="130" r="4" fill="#1F2937"/>
-                  <rect x="120" y="230" width="160" height="100" rx="20" fill="#3B82F6"/>
-                  <rect x="140" y="250" width="120" height="60" rx="10" fill="#DBEAFE"/>
-                  <circle cx="320" cy="100" r="30" fill="#FCD34D"/>
-                  <rect x="290" y="130" width="60" height="8" rx="4" fill="#9CA3AF"/>
-                  <circle cx="120" cy="120" r="3" fill="#FCD34D"/>
-                  <circle cx="280" cy="140" r="3" fill="#FCD34D"/>
-                  <circle cx="140" cy="200" r="2" fill="#FCD34D"/>
-                  <circle cx="260" cy="110" r="2" fill="#FCD34D"/>
-                </svg>
-              </div>
+            <div className="relative floating">
+                <img src={heroImage}  alt="" className="w-full h-96 object-cover rounded-2xl" />
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl floating" style={{animationDelay: '0.5s'}}>
                 🦷
               </div>
@@ -447,7 +433,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 heading-font">What Our Patients Say</h2>
-            <p className="text-xl text-gray-600">Real stories from real patients who love their experience at Bright Smile Dental.</p>
+            <p className="text-xl text-gray-600">Real stories from real patients who love their experience at Awesome Smile Dental.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -575,7 +561,7 @@ function App() {
                   <span className="text-2xl">🦷</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold heading-font">Bright Smile Dental</h3>
+                  <h3 className="text-2xl font-bold heading-font">Awesome Smile Dental Clinic</h3>
                   <p className="text-blue-400 text-sm">Modern Dental Care</p>
                 </div>
               </div>
@@ -605,7 +591,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Bright Smile Dental. All rights reserved. | Creating beautiful smiles every day.</p>
+            <p>&copy; 2024 Awesome Smile Dental. All rights reserved. | Creating beautiful smiles every day.</p>
           </div>
         </div>
       </footer>
